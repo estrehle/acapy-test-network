@@ -5,7 +5,7 @@ and three [Hyperledger Aries](https://www.hyperledger.org/use/aries) agents ([AC
 
 ## Getting Started
 
-The script was tested on Ubuntu 20 in Windows Subsystem for Linux (WSL2).
+Tested on Ubuntu 20 in Windows Subsystem for Linux (WSL2).
 
 ### Prerequisites:
 - [Docker](https://docs.docker.com/engine/install/ubuntu/)

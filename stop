@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Stopping ACA-Py agents"
+docker-compose down --remove-orphans
+
+echo "Stopping VON Network"
+cd von-network
+./manage down

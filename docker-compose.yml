@@ -1,0 +1,109 @@
+version: "3"
+services:
+  aries-1:
+    image: bcgovimages/aries-cloudagent:py36-1.16-1_0.7.3
+    container_name: "aries-1"
+    environment:
+      ACAPY_ENDPOINT: "http://aries-1:3002"
+      ACAPY_GENESIS_URL: "http://von_webserver_1:8000/genesis"
+      ACAPY_LABEL: "Aries 1 Agent"
+      ACAPY_WALLET_KEY: "secret"
+      ACAPY_WALLET_SEED: "00000000000000000000000000000001"
+      ADMIN_PORT: 3001
+      AGENT_PORT: 3002
+    entrypoint: /bin/bash
+    command: ["-c",
+      "aca-py start \
+        --admin 0.0.0.0 3001 \
+        --admin-insecure-mode \
+        --auto-accept-intro-invitation-requests \
+        --auto-accept-invites \
+        --auto-accept-requests \
+        --auto-ping-connection \
+        --auto-provision \
+        --debug-connections \
+        --inbound-transport http 0.0.0.0 3002 \
+        --log-level INFO \
+        --outbound-transport http \
+        --public-invites \
+        --wallet-name default \
+        --wallet-type indy
+      "
+    ]
+    networks:
+      - von_von
+    ports:
+      - 8001:3001
+  aries-2:
+    image: bcgovimages/aries-cloudagent:py36-1.16-1_0.7.3
+    container_name: "aries-2"
+    environment:
+      ACAPY_ENDPOINT: "http://aries-2:3002"
+      ACAPY_GENESIS_URL: "http://von_webserver_1:8000/genesis"
+      ACAPY_LABEL: "Aries 2 Agent"
+      ACAPY_WALLET_KEY: "secret"
+      ACAPY_WALLET_SEED: "00000000000000000000000000000002"
+      ADMIN_PORT: 3001
+      AGENT_PORT: 3002
+    entrypoint: /bin/bash
+    command: ["-c",
+      "aca-py start \
+        --admin 0.0.0.0 3001 \
+        --admin-insecure-mode \
+        --auto-accept-intro-invitation-requests \
+        --auto-accept-invites \
+        --auto-accept-requests \
+        --auto-ping-connection \
+        --auto-provision \
+        --debug-connections \
+        --inbound-transport http 0.0.0.0 3002 \
+        --log-level INFO \
+        --outbound-transport http \
+        --public-invites \
+        --wallet-name default \
+        --wallet-type indy
+      "
+    ]
+    networks:
+      - von_von
+    ports:
+      - 8002:3001
+  aries-3:
+    image: bcgovimages/aries-cloudagent:py36-1.16-1_0.7.3
+    container_name: "aries-3"
+    environment:
+      ACAPY_ENDPOINT: "http://aries-3:3002"
+      ACAPY_GENESIS_URL: "http://von_webserver_1:8000/genesis"
+      ACAPY_LABEL: "Aries 3 Agent"
+      ACAPY_WALLET_KEY: "secret"
+      ACAPY_WALLET_SEED: "00000000000000000000000000000003"
+      ADMIN_PORT: 3001
+      AGENT_PORT: 3002
+    entrypoint: /bin/bash
+    command: ["-c",
+      "aca-py start \
+        --admin 0.0.0.0 3001 \
+        --admin-insecure-mode \
+        --auto-accept-intro-invitation-requests \
+        --auto-accept-invites \
+        --auto-accept-requests \
+        --auto-ping-connection \
+        --auto-provision \
+        --debug-connections \
+        --inbound-transport http 0.0.0.0 3002 \
+        --log-level INFO \
+        --outbound-transport http \
+        --public-invites \
+        --wallet-name default \
+        --wallet-type indy
+      "
+    ]
+    networks:
+      - von_von
+    ports:
+      - 8003:3001
+
+networks:
+  von_von:
+    name: von_von
+    external: true

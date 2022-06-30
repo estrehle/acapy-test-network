@@ -1,6 +1,6 @@
 # acapy-test-network
 
-Run a local network consisting of a [Hyperledger Indy](https://www.hyperledger.org/use/hyperledger-indy) ledger ([VON Network](https://github.com/bcgov/von-network))
+Run a local [Hyperledger Indy](https://www.hyperledger.org/use/hyperledger-indy) ledger ([VON Network](https://github.com/bcgov/von-network))
 and three [Hyperledger Aries](https://www.hyperledger.org/use/aries) agents ([ACA-Py](https://github.com/hyperledger/aries-cloudagent-python)).
 
 ## Getting Started
@@ -21,7 +21,7 @@ cd acapy-test-network
 ### Start the network
 To start the network, run `./start`.
 
-Information on the three Aries agents:
+Information on the three Hyperledger Aries agents:
 | Agent name    | Public DID               | Admin interface       |
 |---------------|--------------------------|-----------------------|
 | Aries 1 Agent | `4cLztgZYocjqTdAZM93t27` | http://localhost:8001 |
@@ -29,4 +29,4 @@ Information on the three Aries agents:
 | Aries 3 Agent | `NhSTz5qnEnUtR4eD3pef4N` | http://localhost:8003 |
 
 ### Stop the network
-To stop the network, press <kbd>Ctrl</kbd> + <kbd>c</kbd> and run `./stop`.
+To stop the network, press <kbd>Ctrl</kbd> + <kbd>C</kbd> and run `./stop`.

@@ -1,7 +1,8 @@
 # acapy-test-network
 
 Run a local [Hyperledger Indy](https://www.hyperledger.org/use/hyperledger-indy) ledger ([VON Network](https://github.com/bcgov/von-network))
-and three [Hyperledger Aries](https://www.hyperledger.org/use/aries) agents ([ACA-Py](https://github.com/hyperledger/aries-cloudagent-python)).
+and three [Hyperledger Aries](https://www.hyperledger.org/use/aries) agents ([ACA-Py](https://github.com/hyperledger/aries-cloudagent-python))
+with public DIDs registered on the ledger.
 
 ## Getting Started
 
